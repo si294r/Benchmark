@@ -30,9 +30,13 @@ public class HelloRunnable implements Runnable {
     public void run() {
         try {
             for (int i = 1; i <= 1; i++) {
+                
 //                URL url = new URL("http://localhost/test/test_thread2.php?id=" + _ID);
-                URL url = new URL("http://test-app-124310.appspot.com/"); // test php appengine
+//                URL url = new URL("http://test-app-124310.appspot.com/"); // test php appengine
 //                URL url = new URL("http://testjava-1244.appspot.com/"); // test java appengine
+
+                URL url = new URL("http://test-app-124310.appspot.com/testevent.php");
+
                 InputStreamReader in = new InputStreamReader(url.openStream());
                 StringWriter out = new StringWriter();
                 while (in.ready()) {
