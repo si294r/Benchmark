@@ -16,7 +16,7 @@ public class Benchmark {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        for (int i = 1; i<= 10000; i++) {
+        for (int i = 1; i<= 50000; i++) {
             (new Thread(new HelloRunnable().SetID(i))).start();
         }
     }

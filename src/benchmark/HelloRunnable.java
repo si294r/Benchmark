@@ -34,8 +34,9 @@ public class HelloRunnable implements Runnable {
 //                URL url = new URL("http://localhost/test/test_thread2.php?id=" + _ID);
 //                URL url = new URL("http://test-app-124310.appspot.com/"); // test php appengine
 //                URL url = new URL("http://testjava-1244.appspot.com/"); // test java appengine
-
-                URL url = new URL("http://test-app-124310.appspot.com/testevent.php");
+//                URL url = new URL("http://test-app-124310.appspot.com/testevent.php"); // test php memcache
+                URL url = new URL("http://104.154.32.120/instance2_test.php");
+//                URL url = new URL("https://alegrium.com/billionaire/testEvent.php");
 
                 InputStreamReader in = new InputStreamReader(url.openStream());
                 StringWriter out = new StringWriter();
@@ -44,14 +45,16 @@ public class HelloRunnable implements Runnable {
                 }
                 String content = out.toString();
                 System.out.println(_ID + " TEST : " + content);
-                Thread.sleep(500);
+//                Thread.sleep(500);
             }
-        } catch (MalformedURLException ex) {
+        } catch (Exception ex) {
             System.out.println(_ID + " TEST : " + ex.getMessage());
-        } catch (IOException ex) {
-            System.out.println(_ID + " TEST : " + ex.getMessage());
-        } catch (InterruptedException ex) {
-            System.out.println(_ID + " TEST : " + ex.getMessage());
+//        } catch (MalformedURLException ex) {
+//            System.out.println(_ID + " TEST : " + ex.getMessage());
+//        } catch (IOException ex) {
+//            System.out.println(_ID + " TEST : " + ex.getMessage());
+//        } catch (InterruptedException ex) {
+//            System.out.println(_ID + " TEST : " + ex.getMessage());
         }
 
     }
