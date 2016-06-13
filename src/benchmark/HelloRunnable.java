@@ -40,7 +40,8 @@ public class HelloRunnable implements Runnable {
 //                URL url = new URL("http://130.211.164.23/Billionaire/event/get/android/1.1");
 //                URL url = new URL("http://130.211.164.23/BillionaireAPI/get_event.php?device=android&version=1.1");
 //                URL url = new URL("http://130.211.164.23/BillionaireAPI/get_event.php?android/1.1");
-                URL url = new URL("http://130.211.164.23/BillionaireAPI/update_data.php?fb_" + _ID + "/heru/121/351/2/1.3/android");
+//                URL url = new URL("http://130.211.164.23/BillionaireAPI/update_data.php?fb_" + _ID + "/heru/121/351/2/1.3/android");
+                URL url = new URL("https://billionaire-1181.firebaseapp.com/share/share_achievement_01.png");
 
                 InputStreamReader in = new InputStreamReader(url.openStream());
                 StringWriter out = new StringWriter();
@@ -48,7 +49,8 @@ public class HelloRunnable implements Runnable {
                     out.append((char) in.read());
                 }
                 String content = out.toString();
-                System.out.println(_ID + " TEST SUKSES : " + content);
+//                System.out.println(_ID + " TEST SUKSES : " + content);
+                System.out.println(_ID + " TEST SUKSES : share_achievement_01.png");
 //                Thread.sleep(500);
             }
         } catch (Exception ex) {
